@@ -1,0 +1,11 @@
+.venv/
+.amazon-profile/
+__pycache__/
+*.pyc
+.pytest_cache/
+.runtime/
+.browsers/
+.hub/
+artifacts/
+build/
+dist/

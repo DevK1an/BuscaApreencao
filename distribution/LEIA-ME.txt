@@ -1,0 +1,45 @@
+CompraHub 1.2.0 — Google Shopping — Windows 11 x64
+
+COMO ABRIR
+1. Extraia o ZIP ou abra CompraHub.exe.
+2. Clique em Rastrear preços e informe nome, marca e modelo.
+3. Em Lojas excluídas, mantenha ou remova AliExpress e Shopee e adicione outras lojas.
+4. Configure quantidade, teto por unidade, intervalo e limite da varredura.
+5. Clique em Iniciar. Conclua verificações do Google ou login Amazon na janela, se pedidos.
+
+A busca percorre cartões e ofertas por loja, carrega mais resultados e compara preços anunciados.
+O padrão amplo é 30 rodadas, configurável até 50. A cobertura aparece em Ofertas e histórico.
+Não garante consulta a todo o Google Shopping ou todo o mercado. Frete, impostos, estoque e
+condições podem variar; confira o preço final na loja. O bot não contorna CAPTCHA.
+
+LOJAS EXCLUÍDAS
+Informe um nome ou domínio por linha. Remova uma linha para permitir a loja novamente.
+As exclusões ficam salvas em cada busca. Domínios também bloqueiam seus subdomínios.
+Os nomes são filtrados no Google e os endereços novamente antes da navegação à loja.
+
+AMAZON
+Mantém o preparo do pedido: confere produto e quantidade, tenta ativar cupons exibidos,
+recusa seguro/garantia estendida reconhecidos com Não, obrigado e verifica o total com frete.
+Não inventa códigos promocionais. Cupons que pedem código precisam que você o informe na loja.
+Não repete Adicionar quando a inclusão demora ou não é confirmada. Não remove seus itens.
+O total deve respeitar teto por unidade vezes a quantidade. O clique final da compra é seu.
+
+OUTRAS LOJAS
+Somente abre o produto, inclusive no Mercado Livre. Não seleciona quantidade, adiciona
+itens, aplica cupons ou inicia checkout. Confira preço, estoque e condições pessoalmente.
+
+DADOS E INSTALAÇÃO
+Python e Chromium já estão incluídos. Reserve cerca de 2 GB livres.
+A primeira abertura pode demorar para extrair o navegador. Internet é necessária.
+Dados e sessões do EXE ficam em %LOCALAPPDATA%\CompraHub. Não compartilhe essa pasta.
+O pacote distribuído começa sem contas e cadastros pessoais.
+Ao atualizar, os dados desse computador permanecem. Buscas antigas do hub migram ao Google
+Shopping, preservando nome, quantidade, teto e intervalo.
+
+ENCERRAR
+Mantenha o console aberto. Há uma execução por vez. Use Parar antes de iniciar outra.
+Ctrl+C encerra o hub. O programa não confirma compras automaticamente.
+
+DIAGNÓSTICO
+CompraHub.exe --self-test --report diagnostico.json
+Usa páginas simuladas, sem acessar contas ou confirmar compras.

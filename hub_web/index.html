@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="hub-token" content="__HUB_TOKEN__">
+  <meta name="theme-color" content="#6d4aff">
+  <title>CompraHub · Seus produtos</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+  <script src="/tracking.js" defer></script>
+</head>
+<body>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5Zm0 10 9-5M3 8l9 5m0 0v8M7.5 5.5l9 5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="m14.5 5.5 4 4M4 20l5-1 12-12-4-4L5 15l-1 5Z"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M9 6V3h6v3M6 6l1 15h10l1-15M10 10v7m4-7v7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 2-2.5 2-2.5 4m0 3v.1"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="m10 14 4-4m-6 6-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 10a4 4 0 0 0 6 0l4-4a4 4 0 0 0-6-6l-1 1" transform="translate(2 0) scale(.85 1)"/></symbol>
+  </svg>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="CompraHub, início"><span class="brand-mark"><svg><use href="#i-box"/></svg></span><span>compra<span class="brand-light">hub</span><small>SEU MONITOR DE OFERTAS</small></span></a>
+    <div class="workspace"><span class="workspace-icon">P</span><span>Meu espaço<small>Amazon + Mercado Livre</small></span><span class="workspace-tag">LOCAL</span></div>
+    <p class="nav-label">PRINCIPAL</p>
+    <nav aria-label="Navegação principal">
+      <button class="nav-item selected" id="nav-products"><svg><use href="#i-grid"/></svg>Meus produtos<span id="nav-count">0</span></button>
+      <button class="nav-item" id="help-open"><svg><use href="#i-help"/></svg>Como funciona<svg class="nav-arrow"><use href="#i-arrow"/></svg></button>
+    </nav>
+    <div class="sidebar-note"><span class="tiny-dot"></span>Você tem o controle<strong>O último clique é seu.</strong><p>Na Amazon, prepara o pedido.<br>Outras lojas: abre o produto.</p><svg><use href="#i-check"/></svg></div>
+    <div class="local-status"><span class="online-dot"></span><div>Conectado localmente<small>Neste computador</small></div><svg><use href="#i-monitor"/></svg></div>
+  </aside>
+  <main>
+    <header class="topbar"><span class="breadcrumb"><svg><use href="#i-grid"/></svg>Meu espaço<span>/</span><strong>Produtos</strong></span><span class="privacy-chip"><span class="online-dot"></span>Hub local</span></header>
+    <div class="content">
+      <section class="page-heading"><div><p class="eyebrow">MENOS BUSCA. MAIS CONTROLE.</p><h1>Seus produtos, sob controle<span>.</span></h1><p>Seus links, quantidades e limites em um só lugar.</p></div><div class="heading-actions"><button class="button secondary" id="add-search"><svg><use href="#i-search"/></svg>Rastrear preços</button><button class="button primary" id="add-product"><svg><use href="#i-plus"/></svg>Adicionar produto</button></div></section>
+      <section class="stats" aria-label="Resumo dos produtos">
+        <article class="stat"><span class="stat-icon purple"><svg><use href="#i-box"/></svg></span><p>Produtos cadastrados</p><strong id="stat-total">0</strong><small>Na sua lista de compras</small></article>
+        <article class="stat"><span class="stat-icon blue"><svg><use href="#i-activity"/></svg></span><p>Em execução</p><strong id="stat-active">0<span> / 1</span></strong><small>Uma execução por vez</small></article>
+        <article class="stat"><span class="stat-icon green"><svg><use href="#i-check"/></svg></span><p>Aguardando seu clique</p><strong id="stat-ready">0</strong><small>Confirme o pedido na loja</small></article>
+        <article class="control-card"><span class="control-stars">✧</span><p>Do link ao checkout.</p><strong>Você escolhe.<br>O bot prepara.</strong><span>Seu limite inclui o frete.<svg><use href="#i-arrow"/></svg></span></article>
+      </section>
+      <section class="execution" id="execution" aria-live="polite"><span class="execution-symbol"><svg><use href="#i-clock"/></svg></span><div class="execution-copy"><strong id="execution-title">Tudo pronto para começar</strong><p id="execution-detail">Escolha um produto abaixo e clique em Iniciar. O navegador abre automaticamente.</p></div><div class="execution-actions" id="execution-actions"></div></section>
+      <section class="products-panel">
+        <div class="panel-heading"><div><h2>Meus produtos <span id="product-count">0</span></h2><p>Configure uma vez. Inicie quando quiser.</p></div><div class="search"><svg><use href="#i-search"/></svg><input id="search" type="search" placeholder="Buscar produto..." aria-label="Buscar produto"></div></div>
+        <div class="filters" role="group" aria-label="Filtrar produtos"><button class="filter active" data-filter="all">Todos os produtos</button><button class="filter" data-filter="active">Em execução</button><button class="filter" data-filter="ready">Aguardando confirmação</button><span><span class="amazon-dot">a</span>Amazon + Mercado Livre</span></div>
+        <div class="products-table"><div class="table-head"><span>PRODUTO</span><span>QUANTIDADE</span><span>LIMITE / UNIDADE</span><span>STATUS</span><span>AÇÕES</span></div><div id="product-list"></div><div id="empty-state" class="empty-state" hidden><span class="empty-icon"><svg><use href="#i-box"/></svg></span><h3>Sua próxima compra começa aqui</h3><p>Use Rastrear preços para pesquisar no Google Shopping.</p><button class="button primary" id="empty-add"><svg><use href="#i-plus"/></svg>Adicionar primeiro produto</button></div></div>
+        <footer class="panel-footer"><svg><use href="#i-check"/></svg>O pagamento sempre é confirmado por você, diretamente na loja.<span>Salvo neste computador</span></footer>
+      </section>
+      <p class="page-footnote"><svg><use href="#i-monitor"/></svg>Mantenha o hub e o computador ligados durante o monitoramento.</p>
+    </div>
+  </main>
+  <dialog id="product-dialog" class="product-dialog" aria-labelledby="form-title">
+    <form id="product-form">
+      <div class="dialog-heading"><div><span class="eyebrow">SUA PRÓXIMA COMPRA</span><h2 id="form-title">Adicionar produto</h2></div><button type="button" class="icon-button" data-close aria-label="Fechar formulário"><svg><use href="#i-close"/></svg></button></div>
+      <p class="dialog-description">Encontre ofertas no Google Shopping ou abra um produto por link. Na Amazon, o bot também prepara o pedido.</p><label for="product-mode">Tipo de monitoramento</label><select id="product-mode" name="mode"><option value="url">Monitorar um link</option><option value="search">Buscar no Google Shopping</option></select>
+      <fieldset id="product-stores" class="store-options" aria-describedby="stores-hint"><legend>Origem da busca</legend><strong id="search-source">Google Shopping</strong></fieldset>
+      <p id="stores-hint" class="field-hint"></p>
+      <div id="url-fields">
+      <label for="product-url">Link do produto <span>*</span></label><div class="input-icon"><svg><use href="#i-link"/></svg><input id="product-url" name="url" required maxlength="4096" placeholder="Link completo do produto na loja" autocomplete="off"></div><p class="field-hint">Na Amazon, prepara o pedido. Em outras lojas, somente abre o produto para sua conferência.</p></div><div id="query-fields" hidden><label for="product-query">Nome, marca e modelo <span>*</span></label><input id="product-query" name="query" maxlength="180" placeholder="Ex.: Lápis BIC Evolution 902545 12 cores" autocomplete="off"><p class="field-hint">Inclua versão, capacidade e características importantes. Kits, acessórios e versões diferentes são filtrados pelo título.</p><label for="product-excluded">Lojas excluídas</label><textarea id="product-excluded" name="excluded_stores" class="excluded-stores" rows="3" maxlength="16000" placeholder="AliExpress&#10;Shopee"></textarea><p class="field-hint">Uma loja ou domínio por linha. Essas lojas não entram na escolha. Remova uma linha para permitir a loja novamente.</p><label class="partial-option"><input type="checkbox" id="product-partial" name="allow_partial" checked> Usar ofertas disponíveis quando a varredura for parcial</label><p class="field-hint">A cobertura consultada e eventuais falhas aparecem no histórico. Desmarque para suspender a escolha quando a varredura ficar incompleta.</p><label for="product-pages">Limite da varredura</label><select id="product-pages" name="pages_per_store"><option value="1">Até 1 rodada</option><option value="3">Até 3 rodadas</option><option value="5">Até 5 rodadas</option><option value="10">Até 10 rodadas</option><option value="30" selected>Ampla: até 30 rodadas</option><option value="50">Máxima: até 50 rodadas</option></select><p class="field-hint">A busca percorre cartões, expande as lojas e carrega mais resultados até esgotar os disponíveis ou atingir o limite. Não cobre todo o mercado. Compara preços anunciados; frete, impostos e condições precisam ser confirmados.</p></div>
+      <label for="product-name">Nome do produto <small>opcional</small></label><input id="product-name" name="name" maxlength="100" placeholder="Ex.: Meu próximo console" autocomplete="off">
+      <div class="form-columns"><div><label for="product-quantity">Quantidade <span>*</span></label><input id="product-quantity" name="quantity" type="number" min="1" max="999" step="1" value="1" required></div><div><label for="product-price">Limite por unidade <span>*</span></label><div class="currency-input"><span>R$</span><input id="product-price" name="max_price" inputmode="decimal" value="4.500,00" required maxlength="18"></div></div></div>
+      <p class="field-hint">Cupons disponíveis na loja são ativados automaticamente nos layouts reconhecidos. O total com frete e desconto é conferido antes da sua confirmação.</p>
+      <p class="field-hint">Na Amazon, ofertas reconhecidas de seguro ou garantia estendida são recusadas automaticamente com Não, obrigado.</p>
+      <div class="budget-preview"><svg><use href="#i-check"/></svg><span>Com frete, o pedido pode custar até <strong id="budget-preview">R$ 4.500,00</strong>.</span></div>
+      <label for="product-interval">Intervalo entre consultas</label><select id="product-interval" name="interval_seconds"><option value="60">A cada 1 minuto</option><option value="120" selected>A cada 2 minutos</option><option value="300">A cada 5 minutos</option><option value="600">A cada 10 minutos</option></select>
+      <p id="form-error" class="form-error" role="alert" hidden></p>
+      <div class="dialog-footer"><button type="button" class="button secondary" data-close>Cancelar</button><button type="submit" class="button primary" id="save-product">Salvar produto<svg><use href="#i-check"/></svg></button></div>
+    </form>
+  </dialog>
+  <dialog id="activity-dialog" class="activity-dialog" aria-labelledby="activity-title"><div class="dialog-heading"><div><span class="eyebrow">ACOMPANHAMENTO</span><h2 id="activity-title">Atividade do produto</h2></div><button class="icon-button" data-close aria-label="Fechar atividade"><svg><use href="#i-close"/></svg></button></div><p id="activity-product"></p><pre id="activity-log">Nenhuma atividade ainda.</pre><p class="field-hint">A atividade é atualizada enquanto esta janela estiver aberta.</p></dialog>
+  <dialog id="help-dialog" aria-labelledby="help-title"><div class="dialog-heading"><h2 id="help-title">Do link à sua confirmação</h2><button class="icon-button" data-close aria-label="Fechar ajuda"><svg><use href="#i-close"/></svg></button></div><ol class="help-steps"><li><strong>Cadastre seu produto</strong><p>Busque no Google Shopping, informe marca, modelo, quantidade e teto. Edite Lojas excluídas para escolher quais lojas não consultar.</p></li><li><strong>Inicie o monitoramento</strong><p>O navegador do bot abre a loja ou os resultados da busca. A sessão é reaproveitada. Faça login nessa janela, se necessário.</p></li><li><strong>Deixe o bot preparar</strong><p>Na Amazon, tenta ativar cupons, recusa seguro opcional e confere o total com frete no checkout. Nas outras lojas, apenas abre o produto. Complete endereço ou pagamento pessoalmente se a Amazon pedir.</p></li><li><strong>Faça o clique final</strong><p>O aviso verde indica que produto, quantidade e total foram validados. Revise os dados e confirme pessoalmente na loja.</p></li></ol><p class="help-note">Uma execução por vez: as execuções compartilham o perfil de navegador e os carrinhos das lojas. Parar o bot não remove itens do carrinho.</p></dialog>
+  <dialog id="prices-dialog" class="prices-dialog" aria-labelledby="prices-title">
+    <div class="dialog-heading"><div><span class="eyebrow">RASTREAMENTO DE PREÇOS</span><h2 id="prices-title">Ofertas e histórico</h2></div><button class="icon-button" data-close aria-label="Fechar preços"><svg><use href="#i-close"/></svg></button></div>
+    <p id="prices-product" class="dialog-description"></p>
+    <div id="prices-empty" class="empty-state"><h3>Aguardando a primeira consulta</h3><p>Inicie o monitoramento para registrar preços e comparar ofertas.</p></div>
+    <div id="prices-content" hidden>
+      <div id="prices-coverage" class="coverage"></div><p id="prices-note" class="tracking-note"></p>
+      <div class="price-chart-container"><div class="chart-heading"><strong>Menor preço anunciado por consulta</strong><span>Últimas 100 varreduras · sem frete confirmado</span></div><svg id="price-chart" viewBox="0 0 800 180" role="img" aria-label="Histórico dos preços anunciados"></svg></div>
+      <div class="offers-header"><strong>Ofertas compatíveis encontradas</strong><span id="prices-updated"></span></div>
+      <div id="price-offers" class="price-offers"></div>
+    </div>
+  </dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
